@@ -1,0 +1,127 @@
+// Variables
+$vue3-content-placeholders-primary-color: #ccc !default;
+$vue3-content-placeholders-secondary-color: #eee !default;
+$vue3-content-placeholders-border-radius: 6px !default;
+$vue3-content-placeholders-line-height: 15px !default;
+$vue3-content-placeholders-spacing: 10px !default;
+
+
+
+// Animations
+@keyframes vueContentPlaceholdersAnimation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+
+// Mixins
+@mixin vue3-content-placeholders {
+  position: relative;
+  overflow: hidden;
+  height: $vue3-content-placeholders-line-height;
+  background: $vue3-content-placeholders-secondary-color;
+
+  .vue3-content-placeholders-is-rounded &  {
+    border-radius: $vue3-content-placeholders-border-radius;
+  }
+
+  .vue3-content-placeholders-is-centered & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vue3-content-placeholders-is-animated &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 1000px;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, darken($vue3-content-placeholders-secondary-color, 5%) 15%, transparent 30%);
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: vueContentPlaceholdersAnimation;
+    animation-timing-function: linear;
+  }
+}
+
+@mixin vue3-content-placeholders-spacing {
+  [class^="vue3-content-placeholders-"] + & {
+    margin-top: 2 * $vue3-content-placeholders-spacing;
+  }
+}
+
+
+
+// Styles
+.vue3-content-placeholders-heading {
+  @include vue3-content-placeholders-spacing;
+  display: flex;
+
+  &__img {
+    @include vue3-content-placeholders;
+    width: 2 * $vue3-content-placeholders-line-height + 3 * $vue3-content-placeholders-spacing;
+    height: 2 * $vue3-content-placeholders-line-height + 3 * $vue3-content-placeholders-spacing;
+    margin-right: 1.5 * $vue3-content-placeholders-spacing;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    @include vue3-content-placeholders;
+    width: 85%;
+    margin-bottom: $vue3-content-placeholders-spacing;
+    background: $vue3-content-placeholders-primary-color;
+  }
+
+  &__subtitle {
+    @include vue3-content-placeholders;
+    width: 90%;
+  }
+}
+
+.vue3-content-placeholders-text {
+  @include vue3-content-placeholders-spacing;
+
+  &__line {
+    @include vue3-content-placeholders;
+    width: 100%;
+    margin-bottom: $vue3-content-placeholders-spacing;
+
+    &:nth-child(4n + 1) {
+      width: 80%;
+    }
+
+    &:nth-child(4n + 2) {
+      width: 100%;
+    }
+
+    &:nth-child(4n + 3) {
+      width: 70%;
+    }
+
+    &:nth-child(4n + 4) {
+      width: 85%;
+    }
+  }
+}
+
+.vue3-content-placeholders-img {
+  @include vue3-content-placeholders;
+  @include vue3-content-placeholders-spacing;
+  width: 100%;
+  height: 120px;
+}
