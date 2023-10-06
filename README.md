@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/v/vue3-content-placeholders.svg)
 [![vue3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://vuejs.org/)
 
-This is a port of vue3-content-placeholders for vue2 to vue3 from [Michał Sajnóg](http://github.com/michalsnik/vue-content-placeholders.git) repository
+This is a port of vue-content-placeholders for vue2 to vue3 from [Michał Sajnóg](http://github.com/michalsnik/vue-content-placeholders.git) repository
 
 > Vue addon for rendering fake content while data is fetching to provide better UX and lower bounce rate.
 
@@ -21,10 +21,14 @@ This is a port of vue3-content-placeholders for vue2 to vue3 from [Michał Sajn�
 Include plugin in your `main.js` file.
 
 ```javascript
-import Vue from 'vue'
+import {createApp} from 'vue'
 import VueContentPlaceholders from 'vue3-content-placeholders'
 
+const app = createApp(...)
+...
+
 app.use(VueContentPlaceholders)
+
 ```
 
 > ⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
