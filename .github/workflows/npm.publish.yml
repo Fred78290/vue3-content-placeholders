@@ -15,11 +15,13 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3.8.1
       with:
-        node-version: '15.x'
+        node-version: '20.x'
         # Specifies the registry, this field is required!
         registry-url: https://registry.npmjs.org/
     # clean install of your projects' deps. We use "npm ci" to avoid package lock changes
-    - run: npm ci
+    - run: |
+        npm i
+        npm ci
     # set up git since we will later push to the repo
     - run: |
         git config --global user.name "${{ secrets.GIT_USER_NAME }}"
