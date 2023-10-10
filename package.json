@@ -24,7 +24,7 @@
     "build:common": "cross-env NODE_ENV=development vite build --config config/vite.config.common.js",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "publish": "npm publish --registry https://npm.aldunelabs.com/"
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
