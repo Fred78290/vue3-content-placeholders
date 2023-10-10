@@ -1,6 +1,6 @@
 # vue3-content-placeholders
 
-![npm](https://img.shields.io/npm/v/vue3-content-placeholders.svg)
+![npm](https://img.shields.io/npm/v/@fred78290%2fvue3-content-placeholders.svg)
 [![vue3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://vuejs.org/)
 
 This is a port of vue-content-placeholders for vue2 to vue3 from [Michał Sajnóg](http://github.com/michalsnik/vue-content-placeholders.git) repository
@@ -13,8 +13,8 @@ This is a port of vue-content-placeholders for vue2 to vue3 from [Michał Sajnó
 
 ## :cd: Installation
 
-* via npm: `npm install vue3-content-placeholders --save`
-* via yarn: `yarn add vue3-content-placeholders`
+* via npm: `npm install @fred78290/vue3-content-placeholders --save`
+* via yarn: `yarn add @fred78290/vue3-content-placeholders`
 
 ## :rocket: Usage
 
@@ -22,7 +22,7 @@ Include plugin in your `main.js` file.
 
 ```javascript
 import {createApp} from 'vue'
-import VueContentPlaceholders from 'vue3-content-placeholders'
+import VueContentPlaceholders from '@fred78290/vue3-content-placeholders'
 
 const app = createApp(...)
 ...
