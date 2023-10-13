@@ -2,7 +2,7 @@
   <div :class="className" />
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'content-placeholders-img',
   data () {
