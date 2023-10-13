@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { fileURLToPath, URL } from 'node:url'
 import { terser } from "rollup-plugin-terser";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
@@ -14,7 +14,7 @@ export default defineConfig({
     minify: production,
     lib: {
       // src/indext.ts is where we have exported the component(s)
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: fileURLToPath(new URL('./src/index.ts', import.meta.url)),
       name: "Vue3ContentPlaceHolder",
       // the name of the output files when the build is run
       fileName: "vue3-content-placeholders",
