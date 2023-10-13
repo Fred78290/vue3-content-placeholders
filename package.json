@@ -1,7 +1,7 @@
 {
   "name": "@fred78290/vue3-content-placeholders",
   "description": "Vue3 Components for rendering animated content placeholders like facebook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "Orignal author: Michał Sajnóg <msajnog93@gmail.com> (http://github.com/michalsnik/vue-content-placeholders.git), ported by Fred78290 http://github.com/Fred78290",
   "keywords": [

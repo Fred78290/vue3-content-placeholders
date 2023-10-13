@@ -23,15 +23,15 @@ Include plugin in your `main.js` file.
 ```javascript
 import {createApp} from 'vue'
 import VueContentPlaceholders from '@fred78290/vue3-content-placeholders'
+import '@fred78290/vue3-content-placeholders/style.css'
 
 const app = createApp(...)
+
 ...
 
 app.use(VueContentPlaceholders)
 
 ```
-
-> ⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
 
 ### Examples:
 
